@@ -299,7 +299,7 @@ section{
 }
 .projects-box{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minimax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     place-items: center;
     gap: 3rem;
     row-gap: 5rem;
@@ -460,6 +460,9 @@ section{
     .contact form{
         flex-direction: column;
         padding: 0 2rem; /* slight shift to right */
+    }
+    .projects{
+        padding: 10rem 2rem;
     }
 }
 
