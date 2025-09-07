@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    
+
+    <div id="particles"></div>
+
     <header class = "header">
         <a href = "#home" class = "logo">
             Deb<span>Sar</span>
@@ -25,20 +27,20 @@
         </nav>
         <button class="gradient-btn">debarghasarkar64@gmail.com</button>
     </header>
-    <section class = "home" id = "home">
-        <div class="home-content">
-            <h1>Hi, It's <span>Deb</span></h1>
+    <section class = "home fade-in" id = "home">
+        <div class="home-content slide-in-left">
+            <h1 id="typing-text"></h1>
             <h2>I'm a <span>Game Developer</span></h2>
             <p>I believe that I can deploy a professional game now if I just get some time :)</p>
             <div class="social-icons">
                 <a href = "https://github.com/My-Mation">
                     <i class = "bx bxl-github"></i>
                 </a>
-                <a href = "https://www.linkedin.com/in/debargha-sarkar-33242436b"/>
+                <a href = "https://www.linkedin.com/in/debargha-sarkar-72575937a/">
                     <i class = "bx bxl-linkedin-square"></i>
                 </a>
-                <a href = "https://x.com/My_Mation">
-                    <i class = "bx bxl-twitter"></i>
+                <a href = "https://leetcode.com/u/My_Mation/">
+                    <i class = "bx bx-code"></i>
                 </a>
                 <a href = "https://my-mation69.itch.io/">
                     <i class='bx bx-joystick'></i>
@@ -51,77 +53,90 @@
                 <a href = "#contact" class = "btn">Contact</a>
             </div>
         </div>
-        <div class = "home-img">
+        <div class = "home-img slide-in-right">
             <img src = "profile.png" alt = "profile">
         </div>
     </section>
 
 
 
-    <section class="about" id="about">
-        <div class = "about-img">
+    <section class="about fade-in" id="about">
+        <div class = "about-img slide-in-left">
             <img src = "coding.png"alt = "">
         </div>
-        <div class = "about-content">
+        <div class = "about-content slide-in-right">
             <h2>About <span>Me</span></h2>
             <p>I have basic to moderate coding experience in godot<br>as I made several personal games <br> and 2 full time commercial game. <br> They helped me to learn Python, Shaders, <br> GDScript and node control. <br> I also learnt how to convert such games to web games <br> and how to enable touch screen to them <br> so that the games can be enjoyed in any platform.</p>
             <a href = "#" class = "btn">Read More</a>
         </div>
     </section>
-    <section class = "service" id = "service">
+    <section class = "service fade-in" id = "service">
         <h2 class = "heading">Services</h2>
         <div class = "services-container">
-            <div class="service-box">
+            <div class="service-box fade-in">
                 <div class="service-info">
-                    <h4>Custom Game Development</h4>
-                    <p>I design and build 2D games using Godot Engine. Whether it's a small prototype or a full gameplay loop, I can develop game logic, controls, level design, and export-ready builds for Windows or Web.</p>
+                    <i class="bx bx-game"></i>
+                    <h4>Game Development</h4>
+                    <p>Specialized in 2D game development using Godot Engine. From concept to deployment, I create engaging games with smooth gameplay, intuitive controls, and cross-platform compatibility for web and desktop.</p>
                 </div>
             </div>
-            
-            <div class="service-box">
+
+            <div class="service-box fade-in">
                 <div class="service-info">
-                    <i class="bx bxl-code"></i>
-                    <h4>Software Development</h4>
-                    <p>Need a custom Python script or a small Java/MySQL-based tool? I can create automation scripts, basic CLI tools, or data-processing workflows for specific needs.</p>
+                    <i class="bx bx-code-alt"></i>
+                    <h4>Full-Stack Web Development</h4>
+                    <p>Modern web applications built with React, Node.js, and contemporary frameworks. I deliver responsive, scalable solutions with clean code, optimal performance, and seamless user experiences.</p>
                 </div>
             </div>
-            
-            <div class="service-box">
+
+            <div class="service-box fade-in">
                 <div class="service-info">
-                    <i class="bx bxl-curly"></i>
-                    <h4>Web Integration and GitHub setup</h4>
-                    <p>I can assist with deploying small projects to GitHub Pages, linking your portfolio, and setting up version control for your codebase.</p>
+                    <i class="bx bx-cog"></i>
+                    <h4>Software Engineering</h4>
+                    <p>Custom software solutions using Python, JavaScript, and modern development practices. From automation scripts to complex applications, I build reliable, maintainable code with proper testing and documentation.</p>
                 </div>
             </div>
-            <div class="service-box">
+            <div class="service-box fade-in">
                 <div class="service-info">
-                    <i class="bx bxl-curly"></i>
-                    <h4>Web Development</h4>
-                    <p>I can create websites where you can showcase or promote your products or make a custom one tailored to your needs.</p>
+                    <i class="bx bx-palette"></i>
+                    <h4>UI/UX Design</h4>
+                    <p>User-centered design approach for digital products. I create intuitive interfaces, conduct user research, and ensure optimal user experiences through prototyping, wireframing, and design systems.</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="projects" id="projects">
+    <section class="projects fade-in" id="projects">
         <h2 class="heading">Projects</h2>
         <div class = "projects-box">
 
-            <div class="project-card">
-                <img src = "Sarbanash.jpg" alt = ""> 
+            <div class="project-card fade-in">
+                <img src = "Sarbanash.jpg" alt = "">
                 <h3>Sarbanash</h3>
                 <p>Sarbanash is a survival-style pixel game where the player must dodge and escape waves of enemies. Developed in Godot, it includes smart enemy movement, player health management, hit hurt system and rpg based movement. The game emphasizes real-time responsiveness and scene control using GDScript.</p>
                 <a href = "https://my-mation69.itch.io/sarbanashgame" class="btn">Review Ptoject</a>
             </div>
-             <div class="project-card">
-                <img src = "Kisor.png" alt = ""> 
+             <div class="project-card fade-in">
+                <img src = "Kisor.png" alt = "">
                 <h3>Kisor</h3>
                 <p>Kisor is a 2D Visual Novel built using the Godot Engine. The game showcases branching dialogue options, story telling, and scene transitions using GDScript. Designed and published as an independent project on Itch.io, with the help of my friends for sprites and audio.</p>
-                <a href = "https://my-mation69.itch.io/kisor" class="btn">Review Ptoject</a>
+                <a href = "https://my-mation69.itch.io/kisor" class="btn">Review Project</a>
+            </div>
+             <div class="project-card fade-in">
+                <img src = "golden-pledges.png" alt = "Golden Pledges">
+                <h3>Golden Pledges</h3>
+                <p>Golden Pledges is a modern web application for managing and tracking pledges. Built with React and deployed on Vercel, it features a clean, intuitive interface for creating pledges, tracking progress, and managing commitments with real-time updates and responsive design.</p>
+                <a href = "https://golden-pledges.vercel.app/" class="btn">View Project</a>
+            </div>
+             <div class="project-card fade-in">
+                <img src = "quiz.png" alt = "Online Quiz">
+                <h3>Online Quiz</h3>
+                <p>Online Quiz is an interactive web-based quiz platform built with modern web technologies and deployed on Render. Users can take engaging quizzes on various topics with features like timer functionality, instant score tracking, progress saving, and responsive design for all devices.</p>
+                <a href = "https://online-quiz-azm1.onrender.com" class="btn">View Project</a>
             </div>
         </div>
     </section>
-    <section class = "contact" id = "contact">
+    <section class = "contact fade-in" id = "contact">
         <h2 class = "heading">Contact <span>Me</span></h2>
 
         <form action = "https://formspree.io/f/myzjpgln" method="POST">
@@ -133,7 +148,7 @@
                 <div class = "input-box">
                     <input type = "number" placeholder = "Phone Number" name="phone" required>
                     <input type = "text" placeholder = "Message" name = "subject" required>
-                    
+
                 </div>
             </div>
             <div class = "input-group-2">
@@ -148,11 +163,11 @@
                 <a href = "https://github.com/My-Mation">
                     <i class = "bx bxl-github"></i>
                 </a>
-                <a href = "https://www.linkedin.com/in/debargha-sarkar-33242436b/">
+                <a href = "https://www.linkedin.com/in/debargha-sarkar-72575937a/">
                     <i class = "bx bxl-linkedin-square"></i>
-
-                <a href = "https://x.com/My_Mation">
-                    <i class = "bx bxl-twitter"></i>
+                </a>
+                <a href = "https://leetcode.com/u/My_Mation/">
+                    <i class = "bx bx-code"></i>
                 </a>
                 <a href = "https://my-mation69.itch.io/">
                     <i class='bx bx-joystick'></i>

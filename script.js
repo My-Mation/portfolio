@@ -8,6 +8,12 @@ button.addEventListener('click', () => {
     sound.currentTime = 0;
     sound.play();
 
+    // Shake effect
+    document.body.classList.add('shake');
+    setTimeout(() => {
+        document.body.classList.remove('shake');
+    }, 500);
+
     // Initial burst of confetti
     confetti({
         particleCount: 100,
@@ -55,4 +61,65 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".navbar a").forEach(el => el.style.fontSize = "1.6rem");
         document.querySelectorAll(".social-icons a").forEach(el => el.style.fontSize = "2rem");
     }
+
+    // Scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with animation classes
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Typing animation for home heading
+    const typingText = document.getElementById('typing-text');
+    const fullText = "Hi, It's Deb";
+    let charIndex = 0;
+
+    function typeWriter() {
+        if (charIndex < fullText.length) {
+            typingText.innerHTML += fullText.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 150);
+        } else {
+            // After typing, add the span to "Deb"
+            typingText.innerHTML = typingText.innerHTML.replace('Deb', '<span>Deb</span>');
+        }
+    }
+
+    // Start typing after a short delay
+    setTimeout(typeWriter, 500);
+
+    // Create floating particles
+    const particlesContainer = document.getElementById('particles');
+    const numParticles = 50;
+
+    for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        particlesContainer.appendChild(particle);
+    }
+
+    // Header background change on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(0,0,0,0.9)';
+        } else {
+            header.style.background = 'rgba(0,0,0,0.2)';
+        }
+    });
 });
