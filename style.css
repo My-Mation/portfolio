@@ -326,7 +326,7 @@ section{
     transform: scale(1.05) rotate(1deg);
 }
 .project-card img{
-    max-width: 400px;
+    max-width: 300px;
     border-radius: 0.5rem;
     object-fit: cover;
 }
@@ -463,6 +463,12 @@ section{
     }
     .projects{
         padding: 10rem 2rem;
+    }
+    .projects-box{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .project-card img{
+        max-width: 250px;
     }
 }
 
